@@ -19,6 +19,15 @@
         USER_ID,USER_NAME,USER_PASS,IS_DEL,CRT_USER,CRT_TIME,UPT_USER,UPT_TIME
     </sql>
 
-
+    <select id="login" parameterType="com.tmf.test.model.User" resultType="Integer">
+        select count(1) from USER
+        where IS_DEL = 0
+        <if test="userName != null">
+            and USER_NAME = #{userName}
+        </if>
+        <if test="userPass != null">
+            and USER_PASS = #{userPass}
+        </if>
+    </select>
 
 </mapper>

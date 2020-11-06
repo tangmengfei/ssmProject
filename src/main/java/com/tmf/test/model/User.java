@@ -1,22 +1,22 @@
 package com.tmf.test.model;
 
 
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
 /**
  * 用户信息表
+ *
  * @author Charles
  * @date 2020-08-17 09:57:52
  */
 @Data
-@TableName("USER")
 public class User {
-    private static final long serialVersionUID = 1L;
 
     /**
      * 平台用户id
      */
-    @TableId
     private Integer userId;
 
     /**
