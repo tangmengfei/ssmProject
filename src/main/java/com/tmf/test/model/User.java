@@ -1,8 +1,6 @@
 package com.tmf.test.model;
 
 
-import lombok.Data;
-
 import java.time.LocalDateTime;
 
 /**
@@ -11,7 +9,6 @@ import java.time.LocalDateTime;
  * @author Charles
  * @date 2020-08-17 09:57:52
  */
-@Data
 public class User {
 
     /**
@@ -54,5 +51,11 @@ public class User {
      */
     private LocalDateTime uptTime;
 
+    public Integer getUserId() {
+        return userId;
+    }
 
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 }

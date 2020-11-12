@@ -9,7 +9,6 @@
 
     <!-- 配置扫描注解  @Controller @Service -->
     <context:component-scan base-package="com.tmf.test" />
-    <context:component-scan base-package="com.tmf.test.swagger"/>
 
     <!-- SpringMVC使用<mvc:annotation-driven>自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter -->
     <!-- 处理请求返回json字符串的乱码问题 -->
@@ -42,7 +41,8 @@
     </bean>
 
     <!--重要！将你的SwaggerConfig配置类注入-->
-    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
-    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+<!--    <bean id="swaggerConfig" class="com.tmf.test.swagger.SwaggerConfig"/>-->
+<!--    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />-->
+<!--    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />-->
 
 </beans>

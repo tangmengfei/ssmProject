@@ -6,6 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
     <!-- 加载数据库连接信息配置文件 -->
     <context:property-placeholder location="classpath:db.properties" />
 
@@ -32,8 +33,8 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
+
     <!-- 事物注解驱动-->
     <tx:annotation-driven />
-
 
 </beans>
